@@ -1,15 +1,4 @@
-# CSE422## 🖼️ Quick Visual Reference
-
-<div align="center">
-
-![Hidden Surface](img/1_hidden_surface_simulation.png)
-![Bézier Curve](img/4_bezier_curve.png)
-![Koch Snowflake](img/8_koch_snowflok.png)
-![Circle Drawing](img/7_bresenham_circle_drawing.png)
-
-*Showcasing: Hidden Surface Elimination, Bézier Curves, Koch Snowflake Fractal, and Bresenham Circle Algorithm*
-
-</div>r Graphics Lab 🎨
+# CSE4221: Computer Graphics Lab 🎨
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Matplotlib](https://img.shields.io/badge/Matplotlib-3.0+-green.svg)](https://matplotlib.org/)
@@ -17,18 +6,7 @@
 
 A comprehensive collection of computer graphics algorithms and simulations implemented in Python. This repository contains solutions to all 8 experiments from the CSE4221 Computer Graphics Lab Manual.
 
-## �️ Quick Visual Reference
-
-<div align="center">
-  <img src="img/1_hidden_surface_simulation.png" width="200" alt="Hidden Surface">
-  <img src="img/4_bezier_curve.png" width="200" alt="Bézier Curve">
-  <img src="img/8_koch_snowflok.png" width="200" alt="Koch Snowflake">
-  <img src="img/7_bresenham_circle_drawing.png" width="200" alt="Circle Drawing">
-</div>
-
-*Showcasing: Hidden Surface Elimination, Bézier Curves, Koch Snowflake Fractal, and Bresenham Circle Algorithm*
-
-## �📋 Lab Manual Overview
+## 📋 Lab Manual Overview
 
 ### Warm Up Tasks ✨
 - [x] Draw the National Flag of Bangladesh
@@ -47,34 +25,6 @@ A comprehensive collection of computer graphics algorithms and simulations imple
 | 6 | Bresenham Line Drawing Algorithm | [`6_bresenham_line_drawing.py`](6_bresenham_line_drawing.py) | ![Line Drawing](img/6_bresenham_line_drawing.png) | ✅ Complete |
 | 7 | Bresenham Circle Drawing Algorithm | [`7_bresenham_circle_drawing.py`](7_bresenham_circle_drawing.py) | ![Circle Drawing](img/7_bresenham_circle_drawing.png) | ✅ Complete |
 | 8 | Koch Snowflake Fractal Geometry | [`8_koch_snowflake.py`](8_koch_snowflake.py) | ![Koch Snowflake](img/8_koch_snowflok.png) | ✅ Complete |
-
-## 🎨 Visual Gallery
-
-<div align="center">
-
-### 🔍 Hidden Surface Elimination & Surface Detection
-![Hidden Surface Simulation](img/1_hidden_surface_simulation.png)
-![Visual Surface Detection](img/2_visual_surface_detection.png)
-
-### ✂️ Clipping Algorithms
-![Sutherland-Hodgman Polygon Clipping](img/3_sotherland_hodgeman.png)
-
-### 🎯 Curve Generation & Transformations
-![Bézier Curve Generation](img/4_bezier_curve.png)
-
-### 🔄 2D Geometric Transformations
-![2D Rotation](img/5_two_dimentional_rotation.png)
-![2D Scaling](img/5_two_dimentional_scaling.png)
-![2D Translation](img/5_two_dimentional_translation.png)
-
-### 📐 Bresenham Algorithms
-![Bresenham Line Drawing](img/6_bresenham_line_drawing.png)
-![Bresenham Circle Drawing](img/7_bresenham_circle_drawing.png)
-
-### ❄️ Fractal Geometry
-![Koch Snowflake Fractal](img/8_koch_snowflok.png)
-
-</div>
 
 ## 🚀 Features
 
@@ -110,6 +60,7 @@ Computer_Graphics_Lab/
 ├── 6_bresenham_line_drawing.py        # Bresenham line algorithm
 ├── 7_bresenham_circle_drawing.py      # Bresenham circle algorithm
 ├── 8_koch_snowflake.py                # Koch snowflake fractal
+├── img/                               # Output images directory
 ├── env/                               # Python virtual environment
 └── README.md                          # This file
 ```
@@ -195,25 +146,9 @@ python3 4_bezier_curve.py
 - **Smooth Interpolation**: Continuous curve generation
 
 ### 5. 2D Geometric Transformations
-
-#### 🔄 Rotation
-<img src="img/5_two_dimentional_rotation.png" width="200" align="right" alt="2D Rotation">
-
 - **Translation**: P' = P + T
-- **Rotation**: P' = R(θ) * P (around pivot point)  
+- **Rotation**: P' = R(θ) * P (around pivot point)
 - **Scaling**: P' = S * P (with scaling factors)
-
-The transformation suite includes three fundamental operations:
-
-#### 📏 Scaling  
-<img src="img/5_two_dimentional_scaling.png" width="200" align="right" alt="2D Scaling">
-
-**Scaling Transformation**: Multiplies coordinates by scaling factors to resize objects while maintaining their shape and proportions.
-
-#### ↗️ Translation
-<img src="img/5_two_dimentional_translation.png" width="200" align="right" alt="2D Translation">
-
-**Translation Transformation**: Moves objects from one position to another by adding translation vectors to each vertex.
 
 ### 6. Bresenham Line Algorithm
 - **Integer Arithmetic**: No floating-point calculations
@@ -274,6 +209,8 @@ This project is created for educational purposes as part of the CSE4221 Computer
 
 ---
 
+<div align="center">
+
 ### 🌟 Highlights
 
 > "Computer Graphics is the art of turning mathematics into visual magic!" 
@@ -281,3 +218,5 @@ This project is created for educational purposes as part of the CSE4221 Computer
 This repository demonstrates the beautiful intersection of mathematics, algorithms, and visual art through practical implementations of fundamental computer graphics techniques.
 
 **🎨 All 8 lab experiments successfully implemented with interactive visualizations and educational features!**
+
+</div>
