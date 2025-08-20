@@ -108,22 +108,22 @@ def animate_hidden_surface_elimination():
     ax = fig.add_subplot(111, projection='3d')
 
     # Style the plot
-    fig.patch.set_facecolor('black')
-    ax.set_facecolor('black')
+    fig.patch.set_facecolor('white')
+    ax.set_facecolor('white')
     ax.xaxis.pane.fill = False
     ax.yaxis.pane.fill = False
     ax.zaxis.pane.fill = False
-    ax.xaxis.pane.set_edgecolor('white')
-    ax.yaxis.pane.set_edgecolor('white')
-    ax.zaxis.pane.set_edgecolor('white')
+    ax.xaxis.pane.set_edgecolor('black')
+    ax.yaxis.pane.set_edgecolor('black')
+    ax.zaxis.pane.set_edgecolor('black')
     ax.xaxis.pane.set_alpha(0.1)
     ax.yaxis.pane.set_alpha(0.1)
     ax.zaxis.pane.set_alpha(0.1)
 
     # Set labels
-    ax.set_xlabel('X', color='white')
-    ax.set_ylabel('Y', color='white')
-    ax.set_zlabel('Z', color='white')
+    ax.set_xlabel('X', color='black')
+    ax.set_ylabel('Y', color='black')
+    ax.set_zlabel('Z', color='black')
 
     # Set limits
     limit = 5
@@ -136,13 +136,13 @@ def animate_hidden_surface_elimination():
         ax.clear()
 
         # Reset style after clear
-        ax.set_facecolor('black')
+        ax.set_facecolor('white')
         ax.xaxis.pane.fill = False
         ax.yaxis.pane.fill = False
         ax.zaxis.pane.fill = False
-        ax.xaxis.pane.set_edgecolor('white')
-        ax.yaxis.pane.set_edgecolor('white')
-        ax.zaxis.pane.set_edgecolor('white')
+        ax.xaxis.pane.set_edgecolor('black')
+        ax.yaxis.pane.set_edgecolor('black')
+        ax.zaxis.pane.set_edgecolor('black')
         ax.xaxis.pane.set_alpha(0.1)
         ax.yaxis.pane.set_alpha(0.1)
         ax.zaxis.pane.set_alpha(0.1)
@@ -161,7 +161,7 @@ def animate_hidden_surface_elimination():
             poly = [[vertices[j] for j in range(len(vertices))]]
             collection = Poly3DCollection(poly, alpha=0.8)
             collection.set_facecolor(surface['color'])
-            collection.set_edgecolor('white')
+            collection.set_edgecolor('black')
             collection.set_linewidth(2)
             ax.add_collection3d(collection)
 
@@ -178,10 +178,10 @@ def animate_hidden_surface_elimination():
         title += f'Visible: {len(visible)}/6 - {", ".join(visible_names)}\n'
         title += f'Culled: {", ".join(culled_names)}'
 
-        ax.set_title(title, color='white', fontsize=12)
-        ax.set_xlabel('X', color='white')
-        ax.set_ylabel('Y', color='white')
-        ax.set_zlabel('Z', color='white')
+        ax.set_title(title, color='black', fontsize=12)
+        ax.set_xlabel('X', color='black')
+        ax.set_ylabel('Y', color='black')
+        ax.set_zlabel('Z', color='black')
         ax.set_xlim([-limit, limit])
         ax.set_ylim([-limit, limit])
         ax.set_zlim([-limit, limit])
@@ -220,11 +220,11 @@ def static_demo():
     angles = [0, np.pi/4, np.pi/2, 3*np.pi/4, np.pi, 5*np.pi/4]
     fig, axes = plt.subplots(2, 3, figsize=(
         18, 12), subplot_kw={'projection': '3d'})
-    fig.patch.set_facecolor('black')
+    fig.patch.set_facecolor('white')
 
     for i, angle in enumerate(angles):
         ax = axes[i//3, i % 3]
-        ax.set_facecolor('black')
+        ax.set_facecolor('white')
 
         # Get camera position
         camera_pos = sim.get_camera_position(angle)
@@ -239,7 +239,7 @@ def static_demo():
             poly = [[vertices[j] for j in range(len(vertices))]]
             collection = Poly3DCollection(poly, alpha=0.8)
             collection.set_facecolor(surface['color'])
-            collection.set_edgecolor('white')
+            collection.set_edgecolor('black')
             collection.set_linewidth(1)
             ax.add_collection3d(collection)
 
@@ -252,7 +252,7 @@ def static_demo():
         ax.set_ylim([-3, 3])
         ax.set_zlim([-3, 3])
         ax.set_title(
-            f'Angle: {angle:.2f}π\nVisible: {len(visible)}/6', color='white')
+            f'Angle: {angle:.2f}π\nVisible: {len(visible)}/6', color='black')
 
         # Style panes
         ax.xaxis.pane.fill = False

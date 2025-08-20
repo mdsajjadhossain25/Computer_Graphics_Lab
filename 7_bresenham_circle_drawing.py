@@ -47,7 +47,7 @@ def drawCircle(xc, yc, radius):
 def main():
     # Set up the plot to mimic graphics.h behavior
     fig, ax = plt.subplots(figsize=(10, 10))
-    ax.set_facecolor('black')
+    ax.set_facecolor('white')
     ax.invert_yaxis()  # Invert Y-axis to match graphics.h coordinate system
 
     # Define circle parameters
@@ -65,7 +65,7 @@ def main():
     y_coords = [pixel[1] for pixel in circle_pixels]
 
     # Plot the circle as individual pixels (points)
-    ax.scatter(x_coords, y_coords, c='white', s=2, marker='s')
+    ax.scatter(x_coords, y_coords, c='black', s=2, marker='s')
 
     # Mark the center point
     ax.scatter([xc], [yc], c='red', s=50, marker='+',
@@ -76,7 +76,7 @@ def main():
     ax.set_ylim(0, 500)
     ax.set_aspect('equal')
     ax.set_title(
-        f'Bresenham\'s Circle Drawing Algorithm\nCenter: ({xc}, {yc}), Radius: {radius}', color='white')
+        f'Bresenham\'s Circle Drawing Algorithm\nCenter: ({xc}, {yc}), Radius: {radius}', color='black')
     ax.grid(True, alpha=0.3)
     ax.legend()
 
@@ -117,7 +117,7 @@ Algorithm steps:
 
 Sample output:
 - Draws a circle with center (250, 250) and radius 100
-- Shows individual pixels as white squares on black background
+- Shows individual pixels as black squares on white background
 - Red '+' marker at the center for reference
 - Grid overlay for better visualization
 

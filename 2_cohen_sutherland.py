@@ -6,6 +6,7 @@ x_left, x_right, y_bottom, y_top = 120, 500, 100, 350
 # Region codes
 LEFT, RIGHT, BOTTOM, TOP = 1, 2, 4, 8
 
+
 def region_code(x, y):
     code = 0
     if x > x_right:
@@ -18,6 +19,7 @@ def region_code(x, y):
         code |= BOTTOM
     return code
 
+
 def cohen_sutherland(x1, y1, x2, y2, ax):
     code1 = region_code(x1, y1)
     code2 = region_code(x2, y2)
@@ -25,7 +27,7 @@ def cohen_sutherland(x1, y1, x2, y2, ax):
     while True:
         if not (code1 | code2):
             # Line is completely inside → draw clipped line
-            ax.plot([x1, x2], [y1, y2], color="white", linewidth=2)
+            ax.plot([x1, x2], [y1, y2], color="black", linewidth=2)
             return
         elif code1 & code2:
             # Completely outside
@@ -54,26 +56,31 @@ def cohen_sutherland(x1, y1, x2, y2, ax):
                 x2, y2 = x, y
                 code2 = region_code(x2, y2)
 
+
 def main():
     fig, ax = plt.subplots(figsize=(8, 6))
-    ax.set_facecolor("black")
+    ax.set_facecolor("white")
 
     # Draw clipping window (yellow rectangle)
     rect_x = [x_left, x_right, x_right, x_left, x_left]
     rect_y = [y_bottom, y_bottom, y_top, y_top, y_bottom]
-    ax.plot(rect_x, rect_y, color="yellow")
+    ax.plot(rect_x, rect_y, color="orange", linewidth=2)
 
     # Original line (red)
     x1, y1, x2, y2 = 50, 200, 500, 400
-    ax.plot([x1, x2], [y1, y2], color="red", linestyle="--")
+    ax.plot([x1, x2], [y1, y2], color="red", linestyle="--", alpha=0.7)
 
-    # Clipped line (white)
+    # Clipped line (black)
     cohen_sutherland(x1, y1, x2, y2, ax)
 
     ax.set_xlim(0, 600)
     ax.set_ylim(0, 500)
     ax.set_aspect("equal")
+    ax.set_title("Cohen-Sutherland Line Clipping Algorithm",
+                 color="black", fontsize=14)
+    ax.grid(True, alpha=0.3)
     plt.show()
+
 
 if __name__ == "__main__":
     main()

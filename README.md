@@ -17,14 +17,17 @@ A comprehensive collection of computer graphics algorithms and simulations imple
 
 | # | Algorithm | File | Output Preview | Status |
 |---|-----------|------|----------------|--------|
-| 1 | Hidden Surface Elimination/Visual Surface Detection | [`1_Visual_surface_detection.py`](1_Visual_surface_detection.py) | ![Hidden Surface](img/1_hidden_surface_simulation.png) | ✅ Complete |
-| 2 | Cohen-Sutherland Line Clipping | [`2_cohen_sutherland.py`](2_cohen_sutherland.py) | ![Visual Surface](img/2_visual_surface_detection.png) | ✅ Complete |
-| 3 | Sutherland-Hodgman Polygon Clipping | [`3_sutherland_hodgman_polygon.py`](3_sutherland_hodgman_polygon.py) | ![Polygon Clipping](img/3_sotherland_hodgeman.png) | ✅ Complete |
+| 1a | Visual Surface Detection | [`1_Visual_surface_detection.py`](1_Visual_surface_detection.py) | ![Visual Surface](img/1_Visual_surface_detection.png) | ✅ Complete |
+| 1b | Hidden Surface Simulation | [`1_hidden_surface_simulation.py`](1_hidden_surface_simulation.py) | ![Hidden Surface](img/1_hidden_surface_simulation.png) | ✅ Complete |
+| 2 | Cohen-Sutherland Line Clipping | [`2_cohen_sutherland.py`](2_cohen_sutherland.py) | ![Cohen Sutherland](img/2_cohen_sutherland.png) | ✅ Complete |
+| 3 | Sutherland-Hodgman Polygon Clipping | [`3_sutherland_hodgman_polygon.py`](3_sutherland_hodgman_polygon.py) | ![Polygon Clipping](img/3_sutherland_hodgman_polygon.png) | ✅ Complete |
 | 4 | Bézier Curve Generation | [`4_bezier_curve.py`](4_bezier_curve.py) | ![Bezier Curve](img/4_bezier_curve.png) | ✅ Complete |
-| 5 | 2D Geometric Transformations | Multiple files | ![2D Rotation](img/5_two_dimentional_rotation.png) | ✅ Complete |
+| 5a | 2D Rotation Transformation | [`5_two_dimentional_rotaion.py`](5_two_dimentional_rotaion.py) | ![2D Rotation](img/5_two_dimentional_rotaion.png) | ✅ Complete |
+| 5b | 2D Scaling Transformation | [`5_two_dimentional_scaling.py`](5_two_dimentional_scaling.py) | ![2D Scaling](img/5_two_dimentional_scaling.png) | ✅ Complete |
+| 5c | 2D Translation Transformation | [`5_two_dimentional_translation.py`](5_two_dimentional_translation.py) | ![2D Translation](img/5_two_dimentional_translation.png) | ✅ Complete |
 | 6 | Bresenham Line Drawing Algorithm | [`6_bresenham_line_drawing.py`](6_bresenham_line_drawing.py) | ![Line Drawing](img/6_bresenham_line_drawing.png) | ✅ Complete |
 | 7 | Bresenham Circle Drawing Algorithm | [`7_bresenham_circle_drawing.py`](7_bresenham_circle_drawing.py) | ![Circle Drawing](img/7_bresenham_circle_drawing.png) | ✅ Complete |
-| 8 | Koch Snowflake Fractal Geometry | [`8_koch_snowflake.py`](8_koch_snowflake.py) | ![Koch Snowflake](img/8_koch_snowflok.png) | ✅ Complete |
+| 8 | Koch Snowflake Fractal Geometry | [`8_koch_snowflake.py`](8_koch_snowflake.py) | ![Koch Snowflake](img/8_koch_snowflake.png) | ✅ Complete |
 
 ## 🚀 Features
 

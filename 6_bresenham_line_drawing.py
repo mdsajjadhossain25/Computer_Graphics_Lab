@@ -35,7 +35,7 @@ def drawLine(x1, y1, x2, y2, pixels):
 def main():
     # Set up the plot to mimic graphics.h behavior
     fig, ax = plt.subplots(figsize=(12, 8))
-    ax.set_facecolor('black')
+    ax.set_facecolor('white')
     ax.invert_yaxis()  # Invert Y-axis to match graphics.h coordinate system
 
     # Define line endpoints (same as C++ code)
@@ -53,13 +53,13 @@ def main():
     y_coords = [pixel[1] for pixel in line_pixels]
 
     # Plot the line as individual pixels (points)
-    ax.scatter(x_coords, y_coords, c='white', s=1, marker='s')
+    ax.scatter(x_coords, y_coords, c='black', s=1, marker='s')
 
     # Set up the display
     ax.set_xlim(0, 500)
     ax.set_ylim(0, 500)
     ax.set_aspect('equal')
-    ax.set_title('Bresenham\'s Line Drawing Algorithm', color='white')
+    ax.set_title('Bresenham\'s Line Drawing Algorithm', color='black')
     ax.grid(True, alpha=0.3)
 
     # Add endpoint markers for reference
@@ -96,7 +96,7 @@ Key features:
 
 Sample output:
 - Draws a line from (100, 100) to (400, 370)
-- Shows individual pixels as white squares on black background
+- Shows individual pixels as black squares on white background
 - Displays endpoints in red for reference
 - Prints algorithm statistics
 

@@ -33,24 +33,24 @@ def main():
 
     # Setup matplotlib to mimic graphics.h behavior
     plt.figure(figsize=(10, 8))
-    plt.gca().set_facecolor('black')
+    plt.gca().set_facecolor('white')
     plt.gca().invert_yaxis()  # Invert Y-axis to match graphics.h coordinate system
 
-    # Draw white polygon before scaling
-    plt.plot([], [], color='white', label='Before Scaling', linewidth=2)
+    # Draw black polygon before scaling
+    plt.plot([], [], color='black', label='Before Scaling', linewidth=2)
     draw(x.copy(), y.copy())
-    plt.gca().lines[-1].set_color('white')
+    plt.gca().lines[-1].set_color('black')
 
     # Apply 2d geometric scaling
     scale(x, y, n, sfx, sfy)
 
-    # Draw yellow polygon after scaling
+    # Draw red polygon after scaling
     draw(x, y)
-    plt.gca().lines[-1].set_color('yellow')
+    plt.gca().lines[-1].set_color('red')
 
     plt.axis('equal')
     plt.legend()
-    plt.title('2D Polygon Scaling')
+    plt.title('2D Polygon Scaling', color='black')
     plt.show()
 
 
@@ -83,5 +83,5 @@ The input format is:
 
 This will create a rectangle with vertices at (100,100), (100,150), (150,150), (150,100)
 and scale it by factors 2 and 2 (doubling both x and y coordinates).
-The original polygon will be shown in white and the scaled polygon in yellow.
+The original polygon will be shown in black and the scaled polygon in red.
 """

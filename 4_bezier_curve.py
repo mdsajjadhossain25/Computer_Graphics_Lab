@@ -2,16 +2,20 @@ import math
 import matplotlib.pyplot as plt
 from matplotlib.patches import Circle
 
+
 def factorial(n: int) -> int:
     if n:
         return n * factorial(n - 1)
     return 1
 
+
 def nCr(n: int, r: int) -> float:
     return factorial(n) / float(factorial(r) * factorial(n - r))
 
+
 def bezier_function(k: int, n: int, u: float) -> float:
     return nCr(n, k) * pow(u, k) * pow(1 - u, n - k)
+
 
 def bezier_curve(points, eps: float = 1e-4):
     n = len(points) - 1
@@ -31,16 +35,18 @@ def bezier_curve(points, eps: float = 1e-4):
 
     # Prepare canvas
     fig, ax = plt.subplots(figsize=(8, 6))
-    fig.patch.set_facecolor("black")
-    ax.set_facecolor("black")
+    fig.patch.set_facecolor("white")
+    ax.set_facecolor("white")
 
-    # Draw curve as white pixels (points)
-    ax.plot(xs, ys, linestyle="None", marker=".", markersize=2, color="white")
+    # Draw curve as black pixels (points)
+    ax.plot(xs, ys, linestyle="None", marker=".", markersize=2, color="black")
 
     # Draw control points and small circles (radius ≈ 5 pixels)
     for (cx, cy) in points:
-        ax.plot(cx, cy, marker=".", color="white", markersize=2)  # mimic putpixel
-        circ = Circle((cx, cy), radius=5, edgecolor="white", facecolor="none", linewidth=1)
+        ax.plot(cx, cy, marker=".", color="red",
+                markersize=8)  # control points in red
+        circ = Circle((cx, cy), radius=5, edgecolor="black",
+                      facecolor="none", linewidth=1)
         ax.add_patch(circ)
 
     # Viewport similar to pixel coordinates, invert Y to match graphics.h screen coords
@@ -54,9 +60,11 @@ def bezier_curve(points, eps: float = 1e-4):
 
     plt.show()
 
+
 def main():
     points = [(27, 243), (101, 47), (324, 197), (437, 23)]
     bezier_curve(points)
+
 
 if __name__ == "__main__":
     main()

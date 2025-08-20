@@ -34,24 +34,24 @@ def main():
 
     # Setup matplotlib to mimic graphics.h behavior
     plt.figure(figsize=(10, 8))
-    plt.gca().set_facecolor('black')
+    plt.gca().set_facecolor('white')
     plt.gca().invert_yaxis()  # Invert Y-axis to match graphics.h coordinate system
 
-    # Draw white polygon before translation
-    plt.plot([], [], color='white', label='Before Translation', linewidth=2)
+    # Draw black polygon before translation
+    plt.plot([], [], color='black', label='Before Translation', linewidth=2)
     draw(x.copy(), y.copy())
-    plt.gca().lines[-1].set_color('white')
+    plt.gca().lines[-1].set_color('black')
 
     # Apply 2d geometric translation
     translate(x, y, tx, ty)
 
-    # Draw yellow polygon after translation
+    # Draw red polygon after translation
     draw(x, y)
-    plt.gca().lines[-1].set_color('yellow')
+    plt.gca().lines[-1].set_color('red')
 
     plt.axis('equal')
     plt.legend()
-    plt.title('2D Polygon Translation')
+    plt.title('2D Polygon Translation', color='black')
     plt.show()
 
 
@@ -84,5 +84,5 @@ The input format is:
 
 This will create a square with vertices at (100,100), (100,200), (200,200), (200,100)
 and translate it by 150 units in both x and y directions.
-The original polygon will be shown in white and the translated polygon in yellow.
+The original polygon will be shown in black and the translated polygon in red.
 """
